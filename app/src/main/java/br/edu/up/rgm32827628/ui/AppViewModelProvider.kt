@@ -23,7 +23,7 @@ import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import br.edu.up.rgm32827628.InventoryApplication
-import com.example.inventory.ui.home.HomeViewModel
+import br.edu.up.rgm32827628.ui.home.HomeViewModel
 import br.edu.up.rgm32827628.ui.item.ItemDetailsViewModel
 import br.edu.up.rgm32827628.ui.item.ItemEditViewModel
 import br.edu.up.rgm32827628.ui.item.ItemEntryViewModel
@@ -53,7 +53,7 @@ object AppViewModelProvider {
 
         // Initializer for HomeViewModel
         initializer {
-            HomeViewModel()
+            HomeViewModel(inventoryApplication().container.itemsRepository)
         }
     }
 }
